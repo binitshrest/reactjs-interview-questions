@@ -986,6 +986,9 @@ Hide/Show table of contents
 
     A component that controls the input elements within the forms on subsequent user input is called **Controlled Component**, i.e, every state mutation will have an associated handler function. That means, the displayed data is always in sync with the state of the component.
 
+    or (Easy Defination)
+    In React, a controlled component refers to a form element, like an input or textarea, whose value is controlled by React state. Instead of letting the DOM (Document Object Model) handle the form data, React manages it through its component state.
+
     The controlled components will be implemented using the below steps,
 
     1. Initialize the state using use state hooks in function components or inside constructor for class components.
@@ -1018,7 +1021,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-22. ### What are uncontrolled components?
+23. ### What are uncontrolled components?
 
     The **Uncontrolled Components** are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it. This is a bit more like traditional HTML.
 
@@ -1087,19 +1090,19 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-23. ### What is the difference between createElement and cloneElement?
+24. ### What is the difference between createElement and cloneElement?
 
     JSX elements will be transpiled to `React.createElement()` functions to create React elements which are going to be used for the object representation of UI. Whereas `cloneElement` is used to clone an element and pass it new props.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-24. ### What is Lifting State Up in React?
+25. ### What is Lifting State Up in React?
 
     When several components need to share the same changing data then it is recommended to _lift the shared state up_ to their closest common ancestor. That means if two child components share the same data from its parent, then move the state to parent instead of maintaining local state in both of the child components.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-25. ### What are Higher-Order Components?
+26. ### What are Higher-Order Components?
 
     A _higher-order component_ (_HOC_) is a function that takes a component and returns a new component. Basically, it's a pattern that is derived from React's compositional nature.
 
@@ -1118,7 +1121,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-26. ### What is children prop?
+27. ### What is children prop?
 
     _Children_ is a prop that allows you to pass components as data to other components, just like any other prop you use. Component tree put between component's opening and closing tag will be passed to that component as `children` prop.
 
@@ -1168,7 +1171,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-27. ### How to write comments in React?
+28. ### How to write comments in React?
 
     The comments in React/JSX are similar to JavaScript Multiline comments but are wrapped in curly braces.
 
@@ -1193,7 +1196,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-28. ### What is reconciliation?
+29. ### What is reconciliation?
 
     `Reconciliation` is the process through which React updates the Browser DOM and makes React work faster. React use a `diffing algorithm` so that component updates are predictable and faster. React would first calculate the difference between the `real DOM` and the copy of DOM `(Virtual DOM)` when there's an update of components.
     React stores a copy of Browser DOM which is called `Virtual DOM`. When we make changes or add data, React creates a new Virtual DOM and compares it with the previous one. This comparison is done by `Diffing Algorithm`.
@@ -1201,7 +1204,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-29. ### Does the lazy function support named exports?
+30. ### Does the lazy function support named exports?
 
     No, currently `React.lazy` function supports default exports only. If you would like to import modules which are named exports, you can create an intermediate module that reexports it as the default. It also ensures that tree shaking keeps working and don’t pull unused components.
     Let's take a component file which exports multiple named components,
@@ -1228,7 +1231,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-30. ### Why React uses `className` over `class` attribute?
+31. ### Why React uses `className` over `class` attribute?
 
     The attribute names written in JSX turned into keys of JavaScript objects and the JavaScript names cannot contain dashes or reversed words, it is recommended to use camelCase whereever applicable in JSX code. The attribute `class` is a keyword in JavaScript, and JSX is an extension of JavaScript. That's the principle reason why React uses `className` instead of `class`. Pass a string as the `className` prop.
 
@@ -1240,7 +1243,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-31. ### What are fragments?
+32. ### What are fragments?
 
     It's a common pattern or practice in React for a component to return multiple elements. _Fragments_ let you group a list of children without adding extra nodes to the DOM.
     You need to use either **<Fragment>** or a shorter syntax having empty tag (**<></>**).
@@ -1288,7 +1291,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-32. ### Why fragments are better than container divs?
+33. ### Why fragments are better than container divs?
 
     Below are the list of reasons to prefer fragments over container DOM elements,
 
@@ -1298,7 +1301,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-33. ### What are portals in React?
+34. ### What are portals in React?
 
     _Portal_ is a recommended way to render children into a DOM node that exists outside the DOM hierarchy of the parent component. When using
     CSS transform in a component, its descendant elements should not use fixed positioning, otherwise the layout will blow up. 
@@ -1311,13 +1314,13 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-34. ### What are stateless components?
+35. ### What are stateless components?
 
     If the behaviour of a component is independent of its state then it can be a stateless component. You can use either a function or a class for creating stateless components. But unless you need to use a lifecycle hook in your components, you should go for function components. There are a lot of benefits if you decide to use function components here; they are easy to write, understand, and test, a little faster, and you can avoid the `this` keyword altogether.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-35. ### What are stateful components?
+36. ### What are stateful components?
 
     If the behaviour of a component is dependent on the _state_ of the component then it can be termed as stateful component. These _stateful components_ are either function components with hooks or _class components_.
 
@@ -1369,7 +1372,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-36. ### How to apply validation on props in React?
+37. ### How to apply validation on props in React?
 
     When the application is running in _development mode_, React will automatically check all props that we set on components to make sure they have _correct type_. If the type is incorrect, React will generate warning messages in the console. It's disabled in _production mode_ due to performance impact. The mandatory props are defined with `isRequired`.
 
@@ -1434,7 +1437,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-37. ### What are the advantages of React?
+38. ### What are the advantages of React?
 
     Below are the list of main advantages of React,
 
@@ -1446,7 +1449,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-38. ### What are the limitations of React?
+39. ### What are the limitations of React?
 
     Apart from the advantages, there are few limitations of React too,
 
@@ -1458,13 +1461,13 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-39. ### What are the recommended ways for static type checking?
+40. ### What are the recommended ways for static type checking?
 
     Normally we use _PropTypes library_ (`React.PropTypes` moved to a `prop-types` package since React v15.5) for _type checking_ in the React applications. For large code bases, it is recommended to use _static type checkers_ such as Flow or TypeScript, that perform type checking at compile time and provide auto-completion features.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-40. ### What is the use of `react-dom` package?
+41. ### What is the use of `react-dom` package?
 
     The `react-dom` package provides _DOM-specific methods_ that can be used at the top level of your app. Most of the components are not required to use this module. Some of the methods of this package are:
 
@@ -1476,7 +1479,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-41. ### What is ReactDOMServer?
+42. ### What is ReactDOMServer?
 
     The `ReactDOMServer` object enables you to render components to static markup (typically used on node server). This object is mainly used for _server-side rendering_ (SSR). The following methods can be used in both the server and browser environments:
 
@@ -1503,7 +1506,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-42. ### How to use innerHTML in React?
+43. ### How to use innerHTML in React?
 
     The `dangerouslySetInnerHTML` attribute is React's replacement for using `innerHTML` in the browser DOM. Just like `innerHTML`, it is risky to use this attribute considering cross-site scripting (XSS) attacks. You just need to pass a `__html` object as key and HTML text as value.
 
@@ -1521,7 +1524,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-43. ### How to use styles in React?
+44. ### How to use styles in React?
 
     The `style` attribute accepts a JavaScript object with camelCased properties rather than a CSS string. This is consistent with the DOM style JavaScript property, is more efficient, and prevents XSS security holes.
 
@@ -1540,7 +1543,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-44. ### How events are different in React?
+45. ### How events are different in React?
 
     Handling events in React elements has some syntactic differences:
 
@@ -1549,7 +1552,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-45. ### What is the impact of indexes as keys?
+46. ### What is the impact of indexes as keys?
 
     Keys should be stable, predictable, and unique so that React can keep track of elements.
 
@@ -1572,7 +1575,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-46. ### How do you conditionally render components?
+47. ### How do you conditionally render components?
 
     In some cases you want to render different components depending on some state. JSX does not render `false` or `undefined`, so you can use conditional _short-circuiting_ to render a given part of your component only if a certain condition is true.
 
@@ -1598,7 +1601,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-47. ### Why we need to be careful when spreading props on DOM elements?
+48. ### Why we need to be careful when spreading props on DOM elements?
 
     When we _spread props_ we run into the risk of adding unknown HTML attributes, which is a bad practice. Instead we can use prop destructuring with `...rest` operator, so it will add only required props.
 
@@ -1616,7 +1619,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-48. ### How do you memoize a component?
+49. ### How do you memoize a component?
 
     There are memoize libraries available which can be used on function components.
 
@@ -1648,7 +1651,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-49. ### How you implement Server Side Rendering or SSR?
+50. ### How you implement Server Side Rendering or SSR?
 
     React is already equipped to handle rendering on Node servers. A special version of the DOM renderer is available, which follows the same pattern as on the client side.
 
@@ -1663,19 +1666,19 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-50. ### How to enable production mode in React?
+51. ### How to enable production mode in React?
 
     You should use Webpack's `DefinePlugin` method to set `NODE_ENV` to `production`, by which it strip out things like propType validation and extra warnings. Apart from this, if you minify the code, for example, Uglify's dead-code elimination to strip out development only code and comments, it will drastically reduce the size of your bundle.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-51. ### Do Hooks replace render props and higher order components?
+52. ### Do Hooks replace render props and higher order components?
 
     Both render props and higher-order components render only a single child but in most of the cases Hooks are a simpler way to serve this by reducing nesting in your tree.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-52. ### What is a switching component?
+53. ### What is a switching component?
 
     A _switching component_ is a component that renders one of many components. We need to use object to map prop values to components.
 
@@ -1708,7 +1711,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-53. ### What are React Mixins?
+54. ### What are React Mixins?
 
     _Mixins_ are a way to totally separate components to have a common functionality. Mixins **should not be used** and can be replaced with _higher-order components_ or _decorators_.
 
@@ -1727,7 +1730,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-54. ### What are the Pointer Events supported in React?
+55. ### What are the Pointer Events supported in React?
 
     _Pointer Events_ provide a unified way of handling all input events. In the old days we had a mouse and respective event listeners to handle them but nowadays we have many devices which don't correlate to having a mouse, like phones with touch surface or pens. We need to remember that these events will only work in browsers that support the _Pointer Events_ specification.
 
@@ -1746,7 +1749,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-55. ### Why should component names start with capital letter?
+56. ### Why should component names start with capital letter?
 
     If you are rendering your component using JSX, the name of that component has to begin with a capital letter otherwise React will throw an error as an unrecognized tag. This convention is because only HTML elements and SVG tags can begin with a lowercase letter.
 
@@ -1776,7 +1779,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-56. ### Are custom DOM attributes supported in React v16?
+57. ### Are custom DOM attributes supported in React v16?
 
     Yes. In the past, React used to ignore unknown DOM attributes. If you wrote JSX with an attribute that React doesn't recognize, React would just skip it.
 
@@ -1802,7 +1805,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-57. ### How to loop inside JSX?
+58. ### How to loop inside JSX?
 
     You can simply use `Array.prototype.map` with ES6 _arrow function_ syntax.
 
@@ -1830,7 +1833,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-58. ### How do you access props in attribute quotes?
+59. ### How do you access props in attribute quotes?
 
     React (or JSX) doesn't support variable interpolation inside an attribute value. The below representation won't work:
 
@@ -1852,7 +1855,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-59. ### What is React proptype array with shape?
+60. ### What is React proptype array with shape?
 
     If you want to pass an array of objects to a component with a particular shape then use `React.PropTypes.shape()` as an argument to `React.PropTypes.arrayOf()`.
 
@@ -1869,7 +1872,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-60. ### How to conditionally apply class attributes?
+61. ### How to conditionally apply class attributes?
 
     You shouldn't use curly braces inside quotes because it is going to be evaluated as a string.
 
@@ -1891,13 +1894,13 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-61. ### What is the difference between React and ReactDOM?
+62. ### What is the difference between React and ReactDOM?
 
     The `react` package contains `React.createElement()`, `React.Component`, `React.Children`, and other helpers related to elements and component classes. You can think of these as the isomorphic or universal helpers that you need to build components. The `react-dom` package contains `ReactDOM.render()`, and in `react-dom/server` we have _server-side rendering_ support with `ReactDOMServer.renderToString()` and `ReactDOMServer.renderToStaticMarkup()`.
 
     **[⬆ Back to Top](#table-of-contents)**
 
-62. ### Why ReactDOM is separated from React?
+63. ### Why ReactDOM is separated from React?
 
     The React team worked on extracting all DOM-related features into a separate library called _ReactDOM_. React v0.14 is the first release in which the libraries are split. By looking at some of the packages, `react-native`, `react-art`, `react-canvas`, and `react-three`, it has become clear that the beauty and essence of React has nothing to do with browsers or the DOM.
 
@@ -1905,7 +1908,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-63. ### How to use React label element?
+64. ### How to use React label element?
 
     If you try to render a `<label>` element bound to a text input using the standard `for` attribute, then it produces HTML missing that attribute and prints a warning to the console.
 
@@ -1923,7 +1926,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-64. ### How to combine multiple inline style objects?
+65. ### How to combine multiple inline style objects?
 
     You can use _spread operator_ in regular React:
 
@@ -1943,7 +1946,7 @@ Hide/Show table of contents
 
     **[⬆ Back to Top](#table-of-contents)**
 
-65.  ### How to re-render the view when the browser is resized?
+66.  ### How to re-render the view when the browser is resized?
 
       You can use the `useState` hook to manage the width and height state variables, and the `useEffect` hook to add and remove the `resize` event listener. The `[]` dependency array passed to useEffect ensures that the effect only runs once (on mount) and not on every re-render.
 
